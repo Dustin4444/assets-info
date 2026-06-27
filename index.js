@@ -12,7 +12,9 @@ assetsContext.keys().forEach((k) => {
     c.forEach((p) => {
       const source = p.Network;
       const category = p.Category;
-  
+
+      if (!networks.includes(source)) return;
+
       projectAssetsInfo[source] = projectAssetsInfo[source] || {};
       projectAssetsInfo[source][category] = projectAssetsInfo[source][category] || [];
   
